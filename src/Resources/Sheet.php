@@ -337,10 +337,10 @@ class Sheet extends Resource
         return $this->addColumns([$column]);
     }
 
-    public function addColumns(array $column)
+    public function addColumns(array $columns)
     {
         return $this->client->post("sheets/$this->id/columns", [
-            'json' => $column
+            'json' => $columns
         ]);
     }
 
